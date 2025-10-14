@@ -1,14 +1,14 @@
 server:
   http:
     port: 8080
-
+    
 database:
   postgres:
-    host: $DB_HOST
-    port: $DB_PORT
-    database: $DB_NAME
-    user: $DB_USER
-    password: $DB_PASSWORD
+    host: ${ZITADEL_DATABASE_POSTGRES_HOST}
+    port: ${ZITADEL_DATABASE_POSTGRES_PORT}
+    database: ${ZITADEL_DATABASE_POSTGRES_DATABASE}
+    user: ${ZITADEL_DATABASE_POSTGRES_USER}
+    password: ${ZITADEL_DATABASE_POSTGRES_PASSWORD}
     ssl:
       mode: require
 
@@ -17,7 +17,7 @@ firstInstance:
   org:
     human:
       username: admin
-      password: $ADMIN_PASSWORD
+      password: ${ZITADEL_FIRSTINSTANCE_ORG_HUMAN_PASSWORD}
 
 externalSecure: true
-externalHost: $EXTERNAL_HOST
+externalHost: ${ZITADEL_EXTERNALHOST}

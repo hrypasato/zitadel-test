@@ -10,7 +10,7 @@ database:
     user: ${ZITADEL_DATABASE_POSTGRES_USER}
     password: ${ZITADEL_DATABASE_POSTGRES_PASSWORD}
     ssl:
-      mode: require
+      mode: ${ZITADEL_DATABASE_POSTGRES_SSL_MODE}
 
 firstInstance:
   orgName: MyOrganization

@@ -4,11 +4,11 @@ server:
 
 database:
   postgres:
-    host: ${DB_HOST}
-    port: ${DB_PORT}
-    database: ${DB_NAME}
-    user: ${DB_USER}
-    password: ${DB_PASSWORD}
+    host: $DB_HOST
+    port: $DB_PORT
+    database: $DB_NAME
+    user: $DB_USER
+    password: $DB_PASSWORD
     ssl:
       mode: require
 
@@ -17,7 +17,7 @@ firstInstance:
   org:
     human:
       username: admin
-      password: ${ADMIN_PASSWORD}
+      password: $ADMIN_PASSWORD
 
 externalSecure: true
-externalHost: ${EXTERNAL_HOST}
+externalHost: $EXTERNAL_HOST

@@ -2,6 +2,8 @@ server:
   http:
     port: 8080
     
+masterkey: ${ZITADEL_MASTERKEY}
+
 database:
   postgres:
     host: ${ZITADEL_DATABASE_POSTGRES_HOST}

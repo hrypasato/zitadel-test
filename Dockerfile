@@ -1,7 +1,10 @@
+FROM alpine:latest as builder
+RUN apk add --no-cache gettext
+
 FROM ghcr.io/zitadel/zitadel:latest
 
-# Instalar gettext para envsubst
-RUN apk add --no-cache gettext
+# Copiar envsubst desde alpine
+COPY --from=builder /usr/bin/envsubst /usr/bin/envsubst
 
 COPY entrypoint.sh /entrypoint.sh
 COPY config.yaml /etc/zitadel/config.yaml

@@ -1,5 +1,5 @@
 FROM ghcr.io/zitadel/zitadel:latest
 
-EXPOSE 8080
+EXPOSE 8080 8081
 
-CMD ["zitadel", "start", "--config", "/etc/zitadel/config.yaml"]
+ENTRYPOINT ["/zitadel"]

@@ -1,5 +1,7 @@
 FROM ghcr.io/zitadel/zitadel:latest
 
-EXPOSE 8080 8081
+COPY config.yaml /etc/zitadel/config.yaml
 
-ENTRYPOINT ["/zitadel"]
+EXPOSE 8080
+
+CMD ["/zitadel", "start", "--config", "/etc/zitadel/config.yaml"]

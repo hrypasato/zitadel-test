@@ -7,4 +7,4 @@ EXPOSE 8080
 
 #ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
 #CMD ["start", "--config", "/etc/zitadel/config.yaml", "--masterkeyFromEnv"]
-CMD ["start-from-init", "--masterkeyFromEnv"]
+CMD ["start", "--masterkeyFromEnv"]
